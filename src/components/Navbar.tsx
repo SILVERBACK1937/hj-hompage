@@ -43,23 +43,38 @@ export default function Navbar() {
       }}
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     >
-      <div className="container-max flex items-center justify-between h-20 px-6">
-        <a href="#home" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-navy flex items-center justify-center rounded-sm">
-            <span className="text-white font-bold text-xl">H&J</span>
-          </div>
-          <span className={`font-display font-bold text-xl tracking-tighter ${isScrolled ? 'text-navy' : 'text-white'}`}>
-            PREMIUM
-          </span>
-        </a>
+      <div className="container-max px-6">
+        {/* Top Row: Brand & Mobile Toggle */}
+        <div className="flex items-center justify-between h-16 md:h-20">
+          <a href="#home" className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-navy flex items-center justify-center rounded-sm">
+              <span className="text-white font-bold text-xl">H&J</span>
+            </div>
+            <span className={`font-display font-bold text-lg md:text-xl tracking-tighter ${isScrolled ? 'text-navy' : 'text-white'}`}>
+              PREMIUM SHOP ANGLERS BASE
+            </span>
+          </a>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
+          {/* Mobile Toggle */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <X className={isScrolled ? 'text-navy' : 'text-white'} />
+            ) : (
+              <Menu className={isScrolled ? 'text-navy' : 'text-white'} />
+            )}
+          </button>
+        </div>
+
+        {/* Bottom Row: Desktop Navigation */}
+        <div className={`hidden md:flex items-center justify-center gap-8 pb-4 transition-all duration-300 ${isScrolled ? 'border-t border-navy/5 pt-4' : ''}`}>
           {NAV_LINKS.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className={`font-medium text-sm uppercase tracking-widest transition-colors hover:text-ocean ${
+              className={`font-bold text-[10px] uppercase tracking-[0.2em] transition-colors hover:text-ocean ${
                 isScrolled ? 'text-navy/70' : 'text-white/80'
               }`}
             >
@@ -67,8 +82,8 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#partnership"
-            className={`px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all ${
+            href="mailto:qkrwodus2926@gmail.com?subject=[Inquiry] H&J Premium Shop"
+            className={`px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all ${
               isScrolled
                 ? 'bg-navy text-white hover:bg-ocean'
                 : 'bg-white text-navy hover:bg-ocean hover:text-white'
@@ -77,18 +92,6 @@ export default function Navbar() {
             お問い合わせ
           </a>
         </div>
-
-        {/* Mobile Toggle */}
-        <button
-          className="md:hidden p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? (
-            <X className={isScrolled ? 'text-navy' : 'text-white'} />
-          ) : (
-            <Menu className={isScrolled ? 'text-navy' : 'text-white'} />
-          )}
-        </button>
       </div>
 
       {/* Mobile Menu */}
@@ -110,11 +113,11 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#partnership"
+              href="mailto:qkrwodus2926@gmail.com?subject=[Partnership Inquiry] H&J Premium Shop"
               onClick={() => setIsMobileMenuOpen(false)}
               className="bg-navy text-white px-6 py-3 rounded-lg text-center font-bold"
             >
-              提携のお問い合わせ
+              パートナーシップお問い合わせ
             </a>
           </div>
         </motion.div>

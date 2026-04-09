@@ -6,10 +6,9 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import History from './components/History';
 import Brands from './components/Brands';
 import Partnership from './components/Partnership';
-import Contact from './components/Contact';
+import Notice from './components/Notice';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -19,10 +18,9 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <History />
         <Brands />
         <Partnership />
-        <Contact />
+        <Notice />
       </main>
       <Footer />
     </div>

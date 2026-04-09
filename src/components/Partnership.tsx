@@ -14,12 +14,23 @@ export default function Partnership() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate submission
+    
+    const subject = encodeURIComponent(`[Partnership Inquiry] ${formData.companyName}`);
+    const body = encodeURIComponent(
+      `Business Type: ${formData.businessType}\n` +
+      `Company Name: ${formData.companyName}\n` +
+      `Email: ${formData.email}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:qkrwodus2926@gmail.com?subject=${subject}&body=${body}`;
+
+    // Simulate submission UI state
     setTimeout(() => {
       setIsSubmitted(true);
       // Reset after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000);
-    }, 1000);
+    }, 500);
   };
 
   return (
@@ -34,14 +45,14 @@ export default function Partnership() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-ocean font-bold tracking-[0.2em] uppercase text-xs mb-4 block">
-              ネットワークに参加する
+              ネットワークに参加してください
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold text-navy mb-8 leading-tight">
               情熱を共有する <br />
               パートナーシップ
             </h2>
             <p className="text-navy/60 text-lg mb-12 max-w-md">
-              私たちは、卓越したフィッシング体験の提供に専念し、長期的な協力を大切にするパートナーを募集しています。
+              私たちは卓越した釣り体験の提供に専念し、長期的な協力を大切にするパートナーを募集しています。
             </p>
 
             <div className="space-y-8">
@@ -78,7 +89,7 @@ export default function Partnership() {
                 <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
                   <CheckCircle2 size={40} />
                 </div>
-                <h3 className="text-2xl font-bold text-navy mb-2">お問い合わせを送信しました</h3>
+                <h3 className="text-2xl font-bold text-navy mb-2">お問い合わせが正常に送信されました</h3>
                 <p className="text-navy/60">
                   ご関心をお寄せいただきありがとうございます。 <br />
                   2〜3営業日以内に担当者よりご連絡いたします。
@@ -88,7 +99,7 @@ export default function Partnership() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-navy font-bold text-xs uppercase tracking-widest mb-3">
-                    業種
+                    ビジネスタイプ
                   </label>
                   <div className="grid grid-cols-2 gap-4">
                     {[

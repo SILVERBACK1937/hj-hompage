@@ -12,12 +12,12 @@ export default function Brands() {
               ブランドポートフォリオ
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold text-navy leading-tight">
-              世界最高峰の <br />
-              釣具ブランドを厳選
+              世界最高水準の <br />
+              釣りブランドを厳選する
             </h2>
           </div>
           <p className="text-navy/50 text-sm max-w-xs leading-relaxed">
-            私たちは、品質、革新、そして釣りの精神を共有するメーカーと提携しています。
+            私たちは品質、革新、そして釣りの精神を共有するメーカーとパートナーシップを結んでいます。
           </p>
         </div>
 

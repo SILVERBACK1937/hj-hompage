@@ -23,15 +23,16 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <span className="inline-block text-ocean font-bold tracking-[0.3em] uppercase text-xs mb-6">
-            Premium Fishing shop
+            H&J PREMIUM SHOP ANGLERS BASE
           </span>
           <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.9] mb-8">
-            伝統と共に <br />
-            <span className="text-white/90">フィッシング文化</span> を <br />
+            伝統とともに <br />
+            <span className="text-white/90">釣り文化</span>を <br />
             リードする
           </h1>
+          <h2 className="sr-only">H&J PREMIUM SHOP ANGLERS BASE</h2>
           <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-12">
-            H&Jは最高品質の釣具を提供し、グローバルパートナーと共に持続可能なエコシステムの構築に尽力しています。
+            H&Jは最高品質のフィッシングギアを提供し、グローバルパートナーとともに持続可能なエコシステムの構築に専念しています。
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <motion.a
@@ -40,7 +41,7 @@ export default function Hero() {
               href="#brands"
               className="px-10 py-4 bg-ocean text-white font-bold uppercase tracking-widest text-sm rounded-full shadow-lg shadow-ocean/20 transition-all hover:bg-white hover:text-navy"
             >
-              ブランドを見る
+              ブランド探索
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.05 }}

@@ -13,11 +13,11 @@ export default function Footer() {
                 <span className="text-navy font-bold text-xl">H&J</span>
               </div>
               <span className="font-display font-bold text-xl tracking-tighter">
-                PREMIUM
+                PREMIUM SHOP ANGLERS BASE
               </span>
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-8 max-w-xs">
-              伝統、革新、そしてプレミアムブランドとのパートナーシップを通じて、グローバルなフィッシング文化をリードします。
+              伝統、革新、そしてプレミアムブランドとのパートナーシップを通じて、グローバルな釣り文化を リードします。
             </p>
             <div className="flex gap-4">
               {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (
@@ -64,7 +64,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold text-xs uppercase tracking-[0.2em] mb-8">ニュースレター</h4>
             <p className="text-white/50 text-sm mb-6">
-              最新の業界動向やブランドアップデートを受け取るには、こちらからご登録ください。
+              最新の業界動向とブランドアップデートを受け取るには、購読してください。
             </p>
             <form className="relative">
               <input
@@ -73,7 +73,7 @@ export default function Footer() {
                 className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-ocean transition-all"
               />
               <button className="absolute right-2 top-1/2 -translate-y-1/2 text-ocean font-bold text-xs uppercase tracking-widest px-2">
-                登録
+                購読
               </button>
             </form>
           </div>
@@ -84,6 +84,9 @@ export default function Footer() {
             © 2026 H&J Premium B2B. All Rights Reserved.
           </p>
           <div className="flex gap-8">
+            <a href="#notice" className="text-white/30 text-[10px] uppercase tracking-widest font-bold hover:text-white transition-colors">
+              特定商取引法
+            </a>
             <a href="#" className="text-white/30 text-[10px] uppercase tracking-widest font-bold hover:text-white transition-colors">
               プライバシーポリシー
             </a>
